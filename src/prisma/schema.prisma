@@ -1,0 +1,59 @@
+// ==================================
+// Generator & Datasource
+// ==================================
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ==================================
+// Enums
+// ==================================
+enum ContactStatus {
+  NEW
+  IN_PROGRESS
+  RESOLVED
+  CLOSED
+}
+
+enum UserRole {
+  ADMIN
+  STAFF
+  APPRENTICE
+}
+
+// ==================================
+// Models
+// ==================================
+model ContactMessage {
+  id        String         @id @default(cuid())
+  name      String
+  email     String
+  phone     String
+  subject   String
+  message   String
+  status    ContactStatus  @default(NEW)
+  createdAt DateTime       @default(now())
+}
+
+model User {
+  id              String    @id @default(uuid())
+  name            String
+  email           String    @unique
+  phoneNumber     String?
+  gender          String?
+  address         String?
+  password        String
+  role            UserRole  @default(STAFF)
+  isActive        Boolean   @default(true)
+  isSuperAdmin    Boolean   @default(false)
+  image           String?
+  isSystemAccount Boolean   @default(false)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}

@@ -1,0 +1,110 @@
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gray-text);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: rgba(0, 26, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--light-text);
+  font-size: 16px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-green);
+}
+
+.form-control2 {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid rgb(221, 219, 219);
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.form-control2:focus {
+  outline: none;
+  border-color: var(--green);
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.input-autofill-light:-webkit-autofill,
+.input-autofill-light:-webkit-autofill:hover,
+.input-autofill-light:-webkit-autofill:focus,
+.input-autofill-light:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+/* Autofill fix for dark background inputs */
+.input-autofill-dark:-webkit-autofill,
+.input-autofill-dark:-webkit-autofill:hover,
+.input-autofill-dark:-webkit-autofill:focus,
+.input-autofill-dark:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-dark-bg) inset !important;
+  box-shadow: 0 0 0px 1000px var(--color-dark-bg) inset !important;
+  -webkit-text-fill-color: var(--color-gray-text) !important;
+
+  /* Force border color */
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  outline: none !important;
+
+  /* Fix for Chrome's thick border rendering */
+  caret-color: white;
+  background-clip: padding-box !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+/* Scrollbar container */
+::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+  background: var(--color-dark-bg); /* background of the track */
+}
+
+/* Scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-text); /* color of the scroll thumb */
+  border-radius: 10px; /* roundness of the scroll thumb */
+  border: 2px solid var(--color-dark-bg); /* border around the thumb */
+}
+
+/* Scrollbar track */
+.search-scroll::-webkit-scrollbar-track {
+  background: white; /* background of the track */
+}
+
+/* Scrollbar thumb */
+.search-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-text); /* color of the scroll thumb */
+  border-radius: 10px; /* roundness of the scroll thumb */
+  border: 2px solid white; /* border around the thumb */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

@@ -2,26 +2,60 @@
   "name": "agency",
   "version": "0.1.0",
   "private": true,
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "build": "prisma generate --schema=src/prisma/schema.prisma && next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prisma:generate": "prisma generate --schema=src/prisma/schema.prisma",
+    "prisma:migrate": "prisma migrate dev --schema=src/prisma/schema.prisma",
+    "prisma:studio": "prisma studio --schema=src/prisma/schema.prisma",
+    "postinstall": "npm run prisma:generate"
   },
   "dependencies": {
+    "@fontsource-variable/catamaran": "^5.2.8",
+    "@fontsource-variable/dosis": "^5.2.8",
+    "@fontsource-variable/inter": "^5.2.8",
+    "@heroicons/react": "^2.2.0",
+    "@prisma/client": "^6.16.3",
+    "@tanstack/react-table": "^8.21.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/nprogress": "^0.2.3",
+    "argon2": "^0.44.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
+    "date-fns": "^4.1.0",
+    "dayjs": "^1.11.13",
+    "framer-motion": "^12.23.22",
+    "graphql-request": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "next": "15.5.4",
+    "nextjs-toploader": "^3.9.17",
+    "prisma": "^6.16.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.4"
+    "react-hot-toast": "^2.6.0",
+    "react-icons": "^5.5.0",
+    "react-toastify": "^11.0.5",
+    "recharts": "^3.2.0",
+    "resend": "^4.7.0",
+    "uuid": "^13.0.0",
+    "zod": "^4.1.12",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "@types/uuid": "^10.0.0",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
