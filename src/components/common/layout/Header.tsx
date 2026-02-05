@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import WhatsAppFloat from "./Whatsapp";
+import Image from "next/image";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,13 +41,17 @@ export default function Header() {
           <div className="techvio-responsive-menu flex items-center justify-between">
             <div className="logo">
               <Link href="/">
-                <img
-                  src="/img/stackpro-logo-black.png"
+                <Image
+                  width={150}
+                  height={30}
+                  src="/img/logo/black.png"
                   className="white-logo"
                   alt="logo"
                 />
-                <img
-                  src="/img/stackpro-logo-black.png"
+                <Image
+                  width={150}
+                  height={50}
+                  src="/img/logo/black.png"
                   className="black-logo"
                   alt="logo"
                 />
@@ -70,13 +75,17 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <nav className="navbar flex justify-between items-center">
             <Link className="navbar-brand" href="/">
-              <img
-                src="/img/stackpro-logo-black.png"
+              <Image
+                width={150}
+                height={50}
+                src="/img/logo/black.png"
                 className="white-logo"
                 alt="logo"
               />
-              <img
-                src="/img/stackpro-logo-black.png"
+              <Image
+                width={150}
+                height={50}
+                src="/img/logo/black.png"
                 className="black-logo"
                 alt="logo"
               />
