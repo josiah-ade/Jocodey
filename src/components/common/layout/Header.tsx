@@ -125,7 +125,7 @@ export default function Header() {
       <>
         {/* Overlay */}
         <div
-          className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ${
+          className={`fixed inset-0 bg-black/50 bg-opacity-50 z-40 transition-opacity duration-300 ${
             isOpen ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
           onClick={() => setIsOpen(false)}
@@ -153,8 +153,8 @@ export default function Header() {
                 onClick={() => setIsOpen(false)}
                 className={`${
                   pathname === item.href || pathname.startsWith(item.href + "/")
-                    ? "bg-[rgba(123,104,238,0.1)] rounded-[20px]"
-                    : ""
+                    ? "!text-[#7b68ee] font-semibold"
+                    : "!text-[#404040]"
                 }`}
               >
                 {item.label}
