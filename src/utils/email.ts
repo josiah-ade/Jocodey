@@ -116,7 +116,7 @@ export async function sendContactConfirmationEmail(data: ContactEmailOptions) {
                 </p>
 
                 <p>
-                  If your request is urgent, feel free to reply directly to this email.
+                  If your request is urgent, feel free to reach us directly on Whatsapp through this number +2348031311556..
                 </p>
 
                 <p style="margin-top:24px;">
