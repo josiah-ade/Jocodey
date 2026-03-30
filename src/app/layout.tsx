@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ClientProviders from "./ClientProviders";
+import Script from "next/script";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
@@ -37,6 +38,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CGHXYXN6LB"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-CGHXYXN6LB');
+          `}
+        </Script>
+      </head>
       <body>
         <ClientProviders>{children}</ClientProviders>
       </body>
