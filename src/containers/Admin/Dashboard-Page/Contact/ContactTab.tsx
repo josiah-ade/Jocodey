@@ -5,7 +5,7 @@ import { useState } from "react";
 import ShowContact from "./ShowContact";
 
 function ContactTab() {
-  const [year] = useState(2025);
+  const [year] = useState(new Date().getFullYear());
 
   const { loading } = useEntityActionAnalytics({
     getData: fetchContactStats,
