@@ -21,13 +21,13 @@ function ConfirmModal({ name, onSelect, isLoading }: Props) {
       <div className="flex gap-4 items-center justify-between">
         <Button className="w-full" onClick={() => onSelect(true)}>
           {isLoading ? (
-            <FaSpinner className="animate-spin h-5 w-5 font-semibold" />
+            <FaSpinner className="animate-spin h-5 w-5 font-semibold text-black" />
           ) : (
             "Confirm"
           )}
         </Button>
         <Button
-          className="w-full !border bg-white !border-border-b text-black"
+          className="w-full !border bg-red-500 !border-border-b text-white"
           onClick={() => onSelect(false)}
           disabled={isLoading}
         >
