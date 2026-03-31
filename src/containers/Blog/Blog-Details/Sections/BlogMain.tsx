@@ -84,7 +84,7 @@ export default function BlogMain({ post }: BlogMainProps) {
           </div>
 
           {/* Post contents */}
-          <div dangerouslySetInnerHTML={{ __html: post.contents }} />
+          <div dangerouslySetInnerHTML={{ __html: post.contents }} className="article-desc-blog"/>
         </div>
 
         {/* Footer: Tags + Share */}

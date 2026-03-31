@@ -4394,6 +4394,22 @@ h6 {
   margin-top: 30px;
 }
 
+.article-desc-blog ul {
+  list-style: disc;
+  padding-left: 40px;
+  color: rgb(95, 95, 95);
+}
+
+.article-desc-blog ul li:last-child {
+  margin-bottom: 15px;
+}
+
+.article-desc-blog ol {
+  list-style: decimal;
+  padding-left: 40px;
+  color: rgb(95, 95, 95);
+}
+
 blockquote,
 .blockquote {
   position: relative;
