@@ -4409,6 +4409,10 @@ h6 {
   padding-left: 40px;
   color: rgb(95, 95, 95);
 }
+.article-desc-blog a {
+  color: #7b68ee;
+  font-weight: 700;
+}
 
 blockquote,
 .blockquote {
